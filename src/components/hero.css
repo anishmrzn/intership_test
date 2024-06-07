@@ -1,0 +1,65 @@
+.hero {
+  background-image: linear-gradient(#0029539a, #002e5be7), url(hero.png);
+  background-size: cover;
+  background-position: center;
+  height: 728px;
+  position: relative;
+}
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+.navigation-bar {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  height: 80px;
+}
+.navigation-bar a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.navigation-bar img {
+  height: 48px;
+  width: 160px;
+}
+
+.search-icon {
+  color: white;
+  font-size: 32px;
+}
+
+.hero-title {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  text-align: center;
+}
+.hero-title h1 {
+  font-size: 48px;
+  font-weight: 600;
+}
+.hero-title p {
+  font-size: 20px;
+  font-weight: 400;
+}
+.hero-button {
+  background: transparent;
+  border: solid 1px #ffe500;
+  padding: 16px 28px 16px 28px;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+}
