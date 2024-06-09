@@ -1,0 +1,114 @@
+.resource {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 0 80px 0;
+  background-color: #f9f9ff;
+  gap: 32px;
+}
+.resource-title {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+  justify-content: center;
+}
+.resource-title h1 {
+  font-size: 32px;
+  font-weight: 600;
+  color: #24272e;
+}
+.resource-title p {
+  font-size: 18px;
+  font-weight: 400;
+  color: #7c7d82;
+  text-align: center;
+}
+.resource-content {
+  display: flex;
+  gap: 26px;
+}
+.resource-box {
+  width: 352.91px;
+  height: 337.45px;
+  background-color: white;
+  border: 0px;
+  border-radius: 21.38px;
+  padding: 30px 30px 30px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+.resource-box h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #24272e;
+}
+.resource-box p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #7c7d82;
+}
+.resource-box button {
+  margin-top: 32px;
+}
+.tool-icon {
+  width: 65px;
+  height: 65px;
+  border: solid 0px;
+  border-radius: 18px;
+  background-color: #f8f1ff;
+  position: relative;
+}
+.evidence-icon {
+  width: 65px;
+  height: 65px;
+  border: solid 0px;
+  border-radius: 18px;
+  background-color: #f3f6ff;
+  position: relative;
+}
+.practices-icon {
+  width: 65px;
+  height: 65px;
+  border: solid 0px;
+  border-radius: 18px;
+  background-color: #fae6e0;
+  position: relative;
+}
+.tool-box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.tool-box p {
+  font-size: 18px;
+  font-weight: 400;
+}
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.learnmore-button {
+  color: #1d6fa3;
+  border: none;
+  background: white;
+  font-size: 16px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.view-resource {
+  width: 173px;
+  height: 44px;
+  border: solid 1px #1d6fa3;
+  border-radius: 4px;
+  padding: 10px 16px 10px 16px;
+  background: transparent;
+  font-size: 15.5px;
+  font-weight: 700;
+  color: #24272e;
+}

@@ -1,0 +1,10 @@
+.intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 96px 160px 96px 160px;
+}
+.intro-title {
+}
+.intro-photots {
+  grid-column: 2/4;
+}

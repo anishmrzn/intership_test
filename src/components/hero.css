@@ -30,6 +30,12 @@
   height: 48px;
   width: 160px;
 }
+.resources {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+}
 .dropdown {
   background-color: white;
   border: solid 1px white;
@@ -66,6 +72,23 @@
   font-size: 32px;
   cursor: pointer;
 }
+.modal-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+}
+
+.search-modal {
+  position: relative;
+  padding: 20px;
+}
 
 .search-bar {
   width: 616px;
@@ -74,9 +97,32 @@
   border-radius: 8px;
   border: 1px solid white;
   position: absolute;
-  top: 20%;
+  top: -500%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.close-button {
+  position: absolute;
+  top: -245px;
+  left: 330px;
+  background: white;
+  border: none;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+
+  font-size: 30px;
+  cursor: pointer;
+  color: #585858;
+}
+.close {
+  position: absolute;
+  top: -40%;
+  right: 5%;
+}
+
+.lock-scroll {
+  overflow: hidden;
 }
 
 .hero-title {

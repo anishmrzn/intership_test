@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./hero.css";
 function Hero() {
   const [searchBarVisible, setSearchBarVisible] = useState(false);
   const [dropdownVisible, setDropdownVisible] = useState(false);
+  const modalRef = useRef();
 
   const handleSearchBarToggle = () => {
     setSearchBarVisible(!searchBarVisible);
@@ -11,6 +12,24 @@ function Hero() {
     setDropdownVisible(!dropdownVisible);
   };
 
+  const handleClickOutside = (event) => {
+    if (modalRef.current && !modalRef.current.contains(event.target)) {
+      setSearchBarVisible(false);
+    }
+  };
+
+  useEffect(() => {
+    if (searchBarVisible) {
+      document.body.classList.add("lock-scroll");
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.body.classList.remove("lock-scroll");
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [searchBarVisible]);
   return (
     <div className="hero">
       <div className="navigation">
@@ -20,8 +39,9 @@ function Hero() {
           <span>About Us</span>
           <span>Case Studies</span>
           <span onClick={handledropdownToggle}>
-            Resources
-            {
+            <div className="resources">
+              <div>Resources</div>
+
               <svg
                 width="12"
                 height="8"
@@ -37,7 +57,7 @@ function Hero() {
                   stroke-linejoin="round"
                 />
               </svg>
-            }
+            </div>
           </span>
         </div>
         <div className="search-icon" onClick={handleSearchBarToggle}>
@@ -120,11 +140,16 @@ function Hero() {
       </div>
       <hr />
 
-      <input
-        className={`search-bar ${searchBarVisible ? "" : "hidden"}`}
-        type="text"
-        placeholder="Search"
-      />
+      {searchBarVisible && (
+        <div className="modal-background">
+          <div className="search-modal" ref={modalRef}>
+            <button className="close-button" onClick={handleSearchBarToggle}>
+              <div className="close">&times;</div>
+            </button>
+            <input className="search-bar" type="text" placeholder="Search" />
+          </div>
+        </div>
+      )}
 
       <div className="hero-title">
         <h1>Beautiful analytics to grow smarter</h1>
