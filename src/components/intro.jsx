@@ -30,22 +30,36 @@ function Intro() {
           </svg>
         </button>
       </div>
-      <div className="into-photos">
-        <div>
-          <img src="intro1.jpg" alt="" />
-          <h1>Adriana Homolova</h1>
+      <div className="intro-pictures-alignment">
+        <div className="intro-pictures-alignment1">
+          <div className="intro-content">
+            <div className="intro-img">
+              <div className="intro-image1"></div>
+              {/* <img src="intro1.jpg" alt="Adriana Homolova" /> */}
+            </div>
+            <p>Adriana Homolova</p>
+          </div>
+          <div className="intro-content">
+            <div className="intro-img">
+              <div className="intro-image3"></div>
+            </div>
+            <p>Karolis Granickas</p>
+          </div>
         </div>
-        <div>
-          <img src="intro2.jpg" alt="" />
-          <h1>Sandor Lederer</h1>
-        </div>
-        <div>
-          <img src="intro3.jpg" alt="" />
-          <h1>Karolis Granickas</h1>
-        </div>
-        <div>
-          <img src="intro4.jpg" alt="" />
-          <h1>Zara Montgomery</h1>
+        <div className="intro-pictures-alignment2">
+          <div className="intro-content">
+            <div className="intro-img">
+              <div className="intro-image2"></div>
+            </div>
+            <p>Sandor Lederer</p>
+          </div>
+
+          <div className="intro-content">
+            <div className="intro-img">
+              <div className="intro-image4"></div>
+            </div>
+            <p>Zara Montgomery</p>
+          </div>
         </div>
       </div>
     </div>

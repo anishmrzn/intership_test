@@ -1,7 +1,7 @@
 import "./campaign.css";
 function Campaign() {
   return (
-    <div className="campaign">
+    <div className="campaign ">
       <div className="campaign-title">
         <h1>Campaigns</h1>
         <p>

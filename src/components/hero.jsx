@@ -31,7 +31,7 @@ function Hero() {
     };
   }, [searchBarVisible]);
   return (
-    <div className="hero">
+    <div className="hero ">
       <div className="navigation">
         <div className="navigation-bar">
           <img src="logo.png" alt="" />
@@ -52,9 +52,9 @@ function Hero() {
                 <path
                   d="M1 1.5L6 6.5L11 1.5"
                   stroke="white"
-                  stroke-width="1.67"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="1.67"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
               </svg>
             </div>
@@ -76,9 +76,9 @@ function Hero() {
             <path
               d="M1 18.5C1 17.837 1.26339 17.2011 1.73223 16.7322C2.20107 16.2634 2.83696 16 3.5 16H17M1 18.5C1 19.163 1.26339 19.7989 1.73223 20.2678C2.20107 20.7366 2.83696 21 3.5 21H17V1H3.5C2.83696 1 2.20107 1.26339 1.73223 1.73223C1.26339 2.20107 1 2.83696 1 3.5V18.5Z"
               stroke="#1D6FA3"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
           </svg>
           <div className="dropdown-title">
@@ -97,9 +97,9 @@ function Hero() {
             <path
               d="M11 1L1 13H10L9 21L19 9H10L11 1Z"
               stroke="#1D6FA3"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
           </svg>
 
@@ -119,16 +119,16 @@ function Hero() {
             <path
               d="M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z"
               stroke="#1D6FA3"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <path
               d="M9 7L15 11L9 15V7Z"
               stroke="#1D6FA3"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
           </svg>
 

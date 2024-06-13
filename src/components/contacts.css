@@ -50,18 +50,21 @@
   height: 44px;
   border: solid 1px #0000005d;
   border-radius: 8px;
+  padding: 5px 20px;
 }
 .email-input {
   width: 550px;
   height: 44px;
   border: solid 1px #0000005d;
   border-radius: 8px;
+  padding: 5px 20px;
 }
 .message-input {
   width: 550px;
   height: 117px;
   border: solid 1px #0000005d;
   border-radius: 8px;
+  padding: 5px 20px;
 }
 .submit {
   width: 88px;
