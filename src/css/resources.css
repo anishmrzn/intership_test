@@ -112,3 +112,79 @@
   font-weight: 700;
   color: #24272e;
 }
+
+@media (max-width: 1280px) {
+  .resource {
+    padding: 60px 20px;
+    gap: 24px;
+  }
+
+  .resource-title {
+    gap: 24px;
+  }
+
+  .resource-title h1 {
+    font-size: 28px;
+  }
+
+  .resource-title p {
+    font-size: 16px;
+    padding: 0 20px;
+  }
+
+  .resource-content {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .resource-box {
+    width: 100%;
+    max-width: 352.91px;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .resource-box h1 {
+    font-size: 20px;
+  }
+
+  .resource-box p {
+    font-size: 14px;
+  }
+
+  .tool-box {
+    gap: 12px;
+  }
+
+  .tool-box p {
+    font-size: 16px;
+  }
+
+  .learnmore-button {
+    font-size: 14px;
+  }
+
+  .view-resource {
+    width: 150px;
+    height: 40px;
+    font-size: 12px;
+  }
+}
+@media (max-width: 768px) {
+  .resource-title h1 {
+    font-size: 24px;
+  }
+
+  .resource-title p {
+    font-size: 14px;
+    padding: 0 20px;
+  }
+  .resource-box h1 {
+    font-size: 18px;
+  }
+
+  .resource-box p {
+    font-size: 12px;
+  }
+}

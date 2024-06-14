@@ -38,3 +38,10 @@
 .right-arrow {
   right: 80px;
 }
+@media (max-width: 768px) {
+  .carousel-images img {
+    width: 33.33%;
+    height: 20px;
+    margin-left: 65px;
+  }
+}

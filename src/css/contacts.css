@@ -78,3 +78,73 @@
   color: #24272e;
   margin-top: 32px;
 }
+
+@media (max-width: 1024px) {
+  .contact {
+    padding: 60px 0;
+    gap: 24px;
+  }
+
+  .contact-title h1 {
+    font-size: 28px;
+  }
+
+  .contact-title p {
+    font-size: 16px;
+  }
+
+  .contact-form {
+    width: 450px;
+    height: auto;
+  }
+
+  .name-input {
+    width: 215px;
+  }
+
+  .email-input,
+  .message-input {
+    width: 450px;
+  }
+
+  .submit {
+    margin-top: 24px;
+    width: 80px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact {
+    padding: 40px 0;
+    gap: 16px;
+  }
+
+  .contact-title h1 {
+    font-size: 24px;
+  }
+
+  .contact-title p {
+    font-size: 14px;
+  }
+
+  .contact-form {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .name-container {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .name-input,
+  .email-input,
+  .message-input {
+    width: 100%;
+  }
+
+  .submit {
+    margin-top: 20px;
+  }
+}

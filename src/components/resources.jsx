@@ -1,4 +1,4 @@
-import "./resources.css";
+import "../css/resources.css";
 function Resources() {
   return (
     <div className="resource">

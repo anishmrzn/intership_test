@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./news.css";
+import "../css/news.css";
 
 const News = () => {
   const [news, setNews] = useState([]);
@@ -28,10 +28,11 @@ const News = () => {
 
   return (
     <div className={`news ${showAll ? "expanded" : ""}`}>
-      <div>
+      <div className="news-title">
         <h1>News</h1>
         <p>
-          We aim to stop public funds siphoning off and we have a plan that will
+          We aim to stop public funds siphoning off and we have a plan that will{" "}
+          <br />
           help. We are working at the national and EU levels to advance.
         </p>
       </div>

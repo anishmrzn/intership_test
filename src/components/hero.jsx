@@ -1,20 +1,28 @@
 import { useEffect, useRef, useState } from "react";
-import "./hero.css";
+import "../css/hero.css";
+
 function Hero() {
   const [searchBarVisible, setSearchBarVisible] = useState(false);
   const [dropdownVisible, setDropdownVisible] = useState(false);
+  const [navVisible, setNavVisible] = useState(false);
   const modalRef = useRef();
 
   const handleSearchBarToggle = () => {
     setSearchBarVisible(!searchBarVisible);
   };
+
   const handledropdownToggle = () => {
     setDropdownVisible(!dropdownVisible);
+  };
+
+  const handleNavToggle = () => {
+    setNavVisible(!navVisible);
   };
 
   const handleClickOutside = (event) => {
     if (modalRef.current && !modalRef.current.contains(event.target)) {
       setSearchBarVisible(false);
+      setNavVisible(false);
     }
   };
 
@@ -30,38 +38,43 @@ function Hero() {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [searchBarVisible]);
+
   return (
-    <div className="hero ">
+    <div className="hero">
       <div className="navigation">
         <div className="navigation-bar">
           <img src="logo.png" alt="" />
-          <span>Home</span>
-          <span>About Us</span>
-          <span>Case Studies</span>
-          <span onClick={handledropdownToggle}>
-            <div className="resources">
-              <div>Resources</div>
-
-              <svg
-                width="12"
-                height="8"
-                viewBox="0 0 12 8"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M1 1.5L6 6.5L11 1.5"
-                  stroke="white"
-                  strokeWidth="1.67"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </div>
-          </span>
+          <div className="nav-content">
+            <p>Home</p>
+            <p>About Us</p>
+            <p>Case Studies</p>
+            <p onClick={handledropdownToggle}>
+              <div className="resources">
+                <div>Resources</div>
+                <svg
+                  width="12"
+                  height="8"
+                  viewBox="0 0 12 8"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 1.5L6 6.5L11 1.5"
+                    stroke="white"
+                    strokeWidth="1.67"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </div>
+            </p>
+          </div>
         </div>
         <div className="search-icon" onClick={handleSearchBarToggle}>
           <ion-icon name="search-outline"></ion-icon>
+        </div>
+        <div className="hamburger-icon" onClick={handleNavToggle}>
+          <ion-icon name="menu-outline"></ion-icon>
         </div>
       </div>
       <div className={`dropdown ${dropdownVisible ? "" : "hidden"}`}>
@@ -102,7 +115,6 @@ function Hero() {
               strokeLinejoin="round"
             />
           </svg>
-
           <div className="dropdown-title">
             <h2>Customer stories</h2>
             <p>Learn how our customers are making big changes.</p>
@@ -131,15 +143,46 @@ function Hero() {
               strokeLinejoin="round"
             />
           </svg>
-
           <div className="dropdown-title">
             <h2>Video tutorials</h2>
             <p>Get up and running on new features and techniques.</p>
           </div>
         </div>
       </div>
+      <div className={` ${navVisible ? "modal-background" : ""}`}>
+        <div className={`mobile-nav ${navVisible ? "" : "hidden"}`}>
+          <button className="close-nav" onClick={handleNavToggle}>
+            &times;
+          </button>
+          <p>Home</p>
+          <p>About Us</p>
+          <p>Case Studies</p>
+          <p onClick={handledropdownToggle}>
+            <div className="resources">
+              <div>Resources</div>
+              <svg
+                width="12"
+                height="8"
+                viewBox="0 0 12 8"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1 1.5L6 6.5L11 1.5"
+                  stroke="white"
+                  strokeWidth="1.67"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </div>
+          </p>
+          <div className="search-icon-mobile" onClick={handleSearchBarToggle}>
+            <ion-icon name="search-outline"></ion-icon>
+          </div>
+        </div>
+      </div>
       <hr />
-
       {searchBarVisible && (
         <div className="modal-background">
           <div className="search-modal" ref={modalRef}>
@@ -150,7 +193,6 @@ function Hero() {
           </div>
         </div>
       )}
-
       <div className="hero-title">
         <h1>Beautiful analytics to grow smarter</h1>
         <p>
@@ -176,4 +218,5 @@ function Hero() {
     </div>
   );
 }
+
 export default Hero;

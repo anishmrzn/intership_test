@@ -1,4 +1,4 @@
-import "./campaign.css";
+import "../css/campaign.css";
 function Campaign() {
   return (
     <div className="campaign ">
