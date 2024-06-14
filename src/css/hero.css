@@ -283,6 +283,9 @@
     padding: 10px 20px;
     font-size: 12px;
   }
+  .close-button {
+    left: 560%;
+  }
 }
 
 .hamburger-icon {
@@ -372,6 +375,14 @@
   .hero-button {
     padding: 10px 20px;
     font-size: 12px;
+  }
+  .search-bar {
+    width: 200px;
+    height: 38px;
+    padding: 10px;
+  }
+  .close-button {
+    left: 300%;
   }
 }
 @media (max-width: 500px) {
